@@ -1,0 +1,17 @@
+"""
+A directive used by the Apollo iOS client to annotate operations or fragments that should be used exclusively for generating local cache mutations instead of as standard operations.
+"""
+directive @apollo_client_ios_localCacheMutation on QUERY | MUTATION | SUBSCRIPTION | FRAGMENT_DEFINITION
+
+"""Root Query"""
+type Query {
+  """List of All Movies"""
+  movies: [Movie]
+}
+
+"""This represents a movie directed by an director"""
+type Movie {
+  id: Int!
+  name: String!
+  thumb: String!
+}
